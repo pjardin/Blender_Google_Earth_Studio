@@ -59,7 +59,7 @@ class WM_OT_HelloWorld(Operator):
     bl_idname = "wm.hello_world"
 
     def execute(self, context):
-        scene = context.scene
+        scene = bpy.context.scene
         mytool = scene.my_tool
 
         # print the values to the console
@@ -89,7 +89,7 @@ class OBJECT_PT_CustomPanel(Panel):
 
     def draw(self, context):
         layout = self.layout
-        scene = context.scene
+        scene = bpy.context.scene
         mytool = scene.my_tool
 
         layout.prop(mytool, "my_path")
@@ -327,7 +327,7 @@ def get_json():
 
 def moveCamera():
 
-    scene = context.scene
+    scene = bpy.context.scene
 
 
 
